@@ -209,7 +209,3 @@ export const Constants = {
     Enums: {},
   },
 } as const;
-
-export type ProductWithCelebration = Database["public"]["Tables"]["products"]["Row"] & {
-  celebrations: Database["public"]["Tables"]["celebrations"]["Row"];
-};
