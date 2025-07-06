@@ -1,8 +1,8 @@
 import { ProductCard } from "@/app/components/product/product-card";
-import { getAllProducts } from "@/app/data/mock";
+import { getSearchProducts } from "@/app/supabase";
 
-export async function ProductList() {
-  const products = await getAllProducts();
+export async function ProductList({ query }: { query: string }) {
+  const products = await getSearchProducts(query);
 
   return (
     <section className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
