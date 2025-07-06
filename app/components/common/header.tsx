@@ -1,6 +1,5 @@
 import { ChilpasLogo } from "@/app/components/common/chilpas-logo";
-import { SearchInput } from "@/app/components/search-input";
-import { Suspense } from "react";
+import { SearchInput } from "@/app/components/product/search-input";
 
 export const Header = () => {
   return (
