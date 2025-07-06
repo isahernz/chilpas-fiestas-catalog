@@ -17,7 +17,7 @@ export const products: Product[] = [
     ],
     description:
       "Set de fiesta temática de Bluey, la querida familia de perros azules. Diseño oficial en colores azul y amarillo vibrantes que refleja la alegría, diversión familiar y aventuras que caracterizan a esta adorable serie animada.",
-    celebrationId: "863fb06a-263e-4138-b35d-04ff95ee8230",
+    celebration_id: "863fb06a-263e-4138-b35d-04ff95ee8230",
   },
   {
     id: "3fad57a4-b653-4077-ae23-509c30c9360c",
@@ -34,7 +34,7 @@ export const products: Product[] = [
     ],
     description:
       "Kit de fiesta basado en el popular videojuego Minecraft. Incluye vajilla temática y decoraciones pixeladas.",
-    celebrationId: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
+    celebration_id: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
   },
   {
     id: "464ee894-fa1e-4166-a2ba-748c2c227b98",
@@ -44,7 +44,7 @@ export const products: Product[] = [
     gallery: [],
     content: ["Set de productos de fiesta temáticos de Lady Bug"],
     description: "Set de productos de fiesta temáticos de Lady Bug",
-    celebrationId: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
+    celebration_id: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
   },
   {
     id: "47078a86-6a74-4625-87ca-1891142beb51",
@@ -62,7 +62,7 @@ export const products: Product[] = [
     ],
     description:
       "Set de fiesta temática del icónico superhéroe Superman. Diseño oficial en colores azul y rojo vibrantes que captura toda la fuerza y heroísmo del Hombre de Acero, perfecto para una celebración llena de aventura y diversión.",
-    celebrationId: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
+    celebration_id: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
   },
   {
     id: "5735a9fe-3b38-4c92-874e-9d68ec02bb7c",
@@ -84,7 +84,7 @@ export const products: Product[] = [
     ],
     description:
       "Kit de fiesta temático con diseño de unicornio bebé. Ideal para cumpleaños mágicos con vajilla, decoraciones, juegos y stickers.",
-    celebrationId: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
+    celebration_id: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
   },
   {
     id: "6757acff-c212-4c21-a768-f54c4235d0f6",
@@ -108,7 +108,7 @@ export const products: Product[] = [
     ],
     description:
       "Kit de fiesta con temática Wicked. Incluye platos, vasos, bolsas y adornos inspirados en la historia de Elphaba y Glinda.",
-    celebrationId: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
+    celebration_id: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
   },
   {
     id: "6bd6d21c-635b-4c48-b82e-5d17c4b24260",
@@ -131,7 +131,7 @@ export const products: Product[] = [
     ],
     description:
       "Kit de cumpleaños inspirado en Batman. Contiene todo lo necesario para decorar y ambientar tu fiesta con estilo de superhéroe.",
-    celebrationId: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
+    celebration_id: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
   },
   {
     id: "72c17442-7559-40b8-ac03-0efdc57832a1",
@@ -153,7 +153,7 @@ export const products: Product[] = [
     ],
     description:
       "Kit temático de Peppa Pig para fiestas infantiles. Incluye platos, vasos, decoración y accesorios divertidos.",
-    celebrationId: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
+    celebration_id: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
   },
   {
     id: "96c7a28d-158f-422d-a865-f2a09aaf494b",
@@ -171,7 +171,7 @@ export const products: Product[] = [
     ],
     description:
       "Set de fiesta temática con el adorable personaje de capibara en colores vibrantes y alegres. Diseño divertido y tropical perfecto para crear una celebración única y memorable con la simpatía característica de este entrañable animal.",
-    celebrationId: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
+    celebration_id: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
   },
   {
     id: "a72856ee-4097-47db-ac1f-995b872f72e2",
@@ -189,7 +189,7 @@ export const products: Product[] = [
     ],
     description:
       "Kit de cumpleaños con diseño de Barbie. Incluye platos, vasos, invitaciones y decoración en tonos rosados.",
-    celebrationId: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
+    celebration_id: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
   },
   {
     id: "cc7cfd4b-bf14-4be9-9b9d-2efe35067b1e",
@@ -211,7 +211,7 @@ export const products: Product[] = [
     ],
     description:
       "Kit completo para fiestas con la temática de Masha y el Oso. Ideal para celebrar con alegría y color.",
-    celebrationId: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
+    celebration_id: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
   },
   {
     id: "db1ed238-0ea6-45f2-9b83-5278f07999df",
@@ -235,6 +235,6 @@ export const products: Product[] = [
     ],
     description:
       "Kit para cumpleaños de Paw Patrol con platos, velas, stickers y decoración de los personajes favoritos.",
-    celebrationId: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
+    celebration_id: "75bc1a1b-063d-46c9-a431-ebb6c070bd3b",
   },
 ];
