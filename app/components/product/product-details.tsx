@@ -1,4 +1,4 @@
-import { getProductById } from "@/app/services/product-service";
+import { getProductById } from "@/app/data/mock";
 import { Badge } from "@/app/components/ui/badge";
 
 export default async function ProductDetails({ id }: { id: string }) {

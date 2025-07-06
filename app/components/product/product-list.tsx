@@ -1,5 +1,5 @@
 import { ProductCard } from "@/app/components/product/product-card";
-import { getAllProducts } from "@/app/services/product-service";
+import { getAllProducts } from "@/app/data/mock";
 
 export async function ProductList() {
   const products = await getAllProducts();
