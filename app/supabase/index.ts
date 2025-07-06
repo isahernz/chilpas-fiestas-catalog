@@ -2,7 +2,7 @@ import { createClient } from "@/app/supabase/client";
 
 const supabase = createClient();
 
-export async function getSearchProducts(query: string) {
+export const getSearchProducts = async (query: string) => {
   try {
     const { data: products, error } = await supabase
       .from("products")
@@ -15,9 +15,9 @@ export async function getSearchProducts(query: string) {
   } catch (error) {
     console.error(error);
   }
-}
+};
 
-export async function getProductById(id: string) {
+export const getProductById = async (id: string) => {
   try {
     const { data: product, error } = await supabase
       .from("products")
@@ -31,4 +31,4 @@ export async function getProductById(id: string) {
   } catch (error) {
     console.error(error);
   }
-}
+};
