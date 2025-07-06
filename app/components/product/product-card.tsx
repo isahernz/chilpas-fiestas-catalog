@@ -1,12 +1,11 @@
 "use client";
 
 import { Badge } from "@/app/components/ui/badge";
+import { buttonVariants } from "@/app/components/ui/button";
 import { Card, CardFooter, CardHeader } from "@/app/components/ui/card";
-import { toSlug } from "@/app/utils/to-slug";
+import { Celebration } from "@/app/types/celebration";
 import { Product } from "@/app/types/product";
 import Link from "next/link";
-import { buttonVariants } from "../ui/button";
-import { Celebration } from "../../types/celebration";
 
 export const ProductCard = ({ product }: { product: Product & { celebration: Celebration } }) => {
   return (
@@ -27,7 +26,7 @@ export const ProductCard = ({ product }: { product: Product & { celebration: Cel
 
       <CardFooter className="pb-4">
         <Link
-          href={`/producto/${toSlug(product.name)}`}
+          href={`/products/${product.id}`}
           className={buttonVariants({
             variant: "default",
             className:
