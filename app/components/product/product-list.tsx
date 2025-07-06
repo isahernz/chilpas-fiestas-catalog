@@ -1,5 +1,5 @@
 import { ProductCard } from "@/app/components/product/product-card";
-import { getAllProducts } from "@/app/services/productService";
+import { getAllProducts } from "@/app/services/product-service";
 
 export async function ProductList() {
   const products = await getAllProducts();
