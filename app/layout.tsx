@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={geist.className}>
-      <body>{children}</body>
+      <body className="min-h-screen bg-gradient-to-br from-pink-50 via-blue-50 to-yellow-50">{children}</body>
     </html>
   );
 }
