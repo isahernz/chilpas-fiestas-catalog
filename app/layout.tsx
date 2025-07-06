@@ -14,6 +14,27 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  keywords: ["Chilpas Fiestas", "Catalogo de productos", "Fiestas", "Productos", "Chilpas", "Fiestas"],
+  creator: "Chilpas Fiestas",
+  publisher: "Chilpas Fiestas",
+  metadataBase: new URL("https://chilpasfiestas.com"),
+  openGraph: {
+    title: "Chilpas Fiestas | Catalogo de productos",
+    description:
+      "Disfruta de los mejores productos de Chilpas Fiestas para tus fiestas en nuestro catalogo de productos. Encuentra todo lo que necesitas para hacer tu fiesta un éxito. 🥳",
+    siteName: "Chilpas Fiestas",
+    url: "https://chilpasfiestas.com",
+    images: [
+      {
+        url: "https://0201.nccdn.net/4_2/000/000/024/ec9/logo-chilpas-fiestas.png#RDAMDAID40202834",
+        width: 593,
+        height: 266,
+        alt: "Chilpas Fiestas",
+      },
+    ],
+    locale: "es_MX",
+    type: "website",
+  },
 };
 
 interface RootLayoutProps {
