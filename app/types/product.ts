@@ -3,8 +3,8 @@ export interface Product {
   name: string;
   character: string;
   cover: string;
-  gallery: string[];
+  gallery: string[] | null;
   content: string[];
   description: string;
-  celebrationId: string;
+  celebration_id?: string;
 }
