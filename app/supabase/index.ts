@@ -4,10 +4,15 @@ const supabase = createClient();
 
 export const getSearchProducts = async (query: string) => {
   try {
-    const { data: products, error } = await supabase
-      .from("products")
-      .select(`id, name, character, cover, gallery, content, description, celebrations (id, name)`)
-      .ilike("name", `%${query}%`);
+    const { data, error } = await supabase.rpc("search_products_with_celebration", { query });
+
+    const products = data?.map(({ celebration_id, celebration_name, ...rest }) => ({
+      ...rest,
+      celebrations: {
+        id: celebration_id,
+        name: celebration_name,
+      },
+    }));
 
     if (error) throw new Error("Error fetching products");
 
