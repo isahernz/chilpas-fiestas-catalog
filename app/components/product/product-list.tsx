@@ -1,15 +1,24 @@
+"use client";
+
 import { ProductCard } from "@/app/components/product/product-card";
-import { getSearchProducts } from "@/app/supabase";
+import ProductListSkeleton from "@/app/components/ui/skeletons/product-list-skeleton";
+import { useApi } from "@/app/hooks/useApi";
+import { Product } from "@/app/types/product";
+import { useSearchParams } from "next/navigation";
 
-export async function ProductList({ query }: { query: string }) {
-  const products = await getSearchProducts(query);
+export const ProductList = () => {
+  const searchParams = useSearchParams();
+  const query = searchParams.get("query") || "";
 
-  if (products?.length === 0 || !products) {
-    return (
-      <section className="flex h-64 items-center justify-center">
-        <p className="text-gray-500">Ups! No se encontraron productos 😞</p>
-      </section>
-    );
+  const apiUrl = query ? `/api/products?query=${encodeURIComponent(query)}` : "/api/products";
+  const { data: products, isLoading, error } = useApi<Product[]>(apiUrl);
+
+  if (isLoading) return <ProductListSkeleton />;
+
+  if (error) return <p className="text-red-500">{error}</p>;
+
+  if (!products || products.length === 0) {
+    return <p className="text-gray-500">No se encontraron productos</p>;
   }
 
   return (
@@ -19,4 +28,4 @@ export async function ProductList({ query }: { query: string }) {
       ))}
     </section>
   );
-}
+};
