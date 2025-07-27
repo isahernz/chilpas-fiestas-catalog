@@ -1,3 +1,5 @@
+import { Celebration } from "./celebration";
+
 export interface Product {
   id: string;
   name: string;
@@ -6,5 +8,5 @@ export interface Product {
   gallery: string[] | null;
   content: string[];
   description: string;
-  celebration_id?: string;
+  celebrations: Celebration;
 }
