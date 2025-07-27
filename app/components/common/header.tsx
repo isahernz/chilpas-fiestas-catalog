@@ -1,5 +1,5 @@
 import { ChilpasLogo } from "@/app/components/common/chilpas-logo";
-import { SearchInput } from "@/app/components/product/search-input";
+import { ProductSearch } from "@/app/components/product/product-search";
 
 export const Header = () => {
   return (
@@ -14,7 +14,7 @@ export const Header = () => {
             <span className="text-sm text-gray-500">Encuentra el producto perfecto para tu fiesta 🥳</span>
           </div>
         </div>
-        <SearchInput placeholder="¿Listo para armar tu fiesta?... 🎉🎈🥳" />
+        <ProductSearch placeholder="¿Listo para armar tu fiesta?... 🎉🎈🥳" />
       </header>
     </div>
   );
