@@ -8,7 +8,7 @@ export async function getAllProducts(): Promise<(Product & { celebration: Celebr
 
   return products.map(product => ({
     ...product,
-    celebration: celebrations.find(c => c.id === product.celebration_id)!,
+    celebration: celebrations.find(c => c.id === product.celebrations.id)!,
   }));
 }
 
@@ -23,6 +23,6 @@ export async function getProductById(id: string): Promise<Product & { celebratio
 
   return {
     ...product,
-    celebration: celebrations.find(c => c.id === product.celebration_id)!,
+    celebration: celebrations.find(c => c.id === product.celebrations.id)!,
   };
 }
