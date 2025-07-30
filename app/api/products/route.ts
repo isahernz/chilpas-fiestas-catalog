@@ -1,8 +1,8 @@
 import { getAllProducts, getProductsByCelebration, searchProducts } from "@/app/lib/db/products";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
+export async function GET(request: NextRequest) {
+  const searchParams = request.nextUrl.searchParams;
   const query = searchParams.get("query");
   const celebration = searchParams.get("celebration");
 
