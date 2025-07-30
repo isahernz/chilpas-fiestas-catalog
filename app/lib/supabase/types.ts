@@ -38,16 +38,19 @@ export type Database = {
           created_at: string;
           id: string;
           name: string;
+          slug: string | null;
         };
         Insert: {
           created_at?: string;
           id?: string;
           name: string;
+          slug?: string | null;
         };
         Update: {
           created_at?: string;
           id?: string;
           name?: string;
+          slug?: string | null;
         };
         Relationships: [];
       };
@@ -103,6 +106,10 @@ export type Database = {
       [_ in never]: never;
     };
     Functions: {
+      generate_slug: {
+        Args: { input_text: string };
+        Returns: string;
+      };
       gtrgm_compress: {
         Args: { "": unknown };
         Returns: unknown;
@@ -148,6 +155,14 @@ export type Database = {
       show_trgm: {
         Args: { "": string };
         Returns: string[];
+      };
+      slugify_text: {
+        Args: { text_to_slug: string };
+        Returns: string;
+      };
+      to_slug: {
+        Args: { input_string: string };
+        Returns: string;
       };
       unaccent: {
         Args: { "": string };
