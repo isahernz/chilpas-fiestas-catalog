@@ -1,9 +1,9 @@
 import { getCelebrationIdBySlug } from "@/app/lib/db/celebrations";
 import { getProductsByCelebration } from "@/app/lib/db/products";
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 
-export async function GET(request: Request, { params }: { params: { celebration: string } }) {
-  const { celebration } = params;
+export async function GET(request: NextRequest, { params }: { params: Promise<{ celebration: string }> }) {
+  const celebration = (await params).celebration;
 
   if (!celebration) {
     return NextResponse.json({ message: "Missing celebration slug in path" }, { status: 400 });
