@@ -1,11 +1,11 @@
 import { ProductInfoDetails } from "@/app/components/product/product-info-details";
 import ProductDetailsSkeleton from "@/app/components/ui/skeletons/product-details-skeleton";
-import { getProductById } from "@/app/lib/get-product-by-id";
 import { Suspense } from "react";
 
 export const generateMetadata = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
-  const product = await getProductById(id);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/products/${id}`);
+  const { data: product } = await res.json();
 
   return {
     title: `Chilpas Fiestas | ${product?.name} 🥳`,

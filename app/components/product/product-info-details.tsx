@@ -1,8 +1,11 @@
 import { Badge } from "@/app/components/ui/badge";
-import { getProductById } from "@/app/lib/get-product-by-id";
+import { Product } from "@/app/types";
+
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 export const ProductInfoDetails = async ({ id }: { id: string }) => {
-  const product = await getProductById(id);
+  const res = await fetch(`${API_BASE_URL}/products/${id}`);
+  const product = (await res.json()) as Product;
 
   return (
     <section className="grid gap-6 md:grid-cols-2 md:items-center md:gap-x-12">
