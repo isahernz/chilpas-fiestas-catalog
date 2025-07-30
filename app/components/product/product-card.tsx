@@ -3,14 +3,10 @@
 import { Badge } from "@/app/components/ui/badge";
 import { buttonVariants } from "@/app/components/ui/button";
 import { Card, CardFooter, CardHeader } from "@/app/components/ui/card";
-import { Celebration, Product } from "@/app/types";
+import { Product } from "@/app/types";
 import Link from "next/link";
 
-interface ProductCardProps extends Product {
-  celebrations: Celebration;
-}
-
-export const ProductCard = ({ product }: { product: ProductCardProps }) => {
+export const ProductCard = ({ product }: { product: Product }) => {
   return (
     <Card className="group overflow-hidden bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       <img
@@ -21,7 +17,7 @@ export const ProductCard = ({ product }: { product: ProductCardProps }) => {
 
       <CardHeader>
         <Badge variant="spotlight" className="text-xs capitalize">
-          {product.celebrations.name}
+          {product.celebrations?.name}
         </Badge>
         <h3 className="line-clamp-2 text-lg font-bold text-gray-900">{product.name}</h3>
         <p className="line-clamp-3 text-sm text-pretty text-gray-600">{product.description}</p>
