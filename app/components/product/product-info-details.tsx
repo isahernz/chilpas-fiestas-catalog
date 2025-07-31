@@ -1,10 +1,10 @@
 import { Badge } from "@/app/components/ui/badge";
 import { Product } from "@/app/types";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || process.env.VERCEL_URL;
 
 export const ProductInfoDetails = async ({ id }: { id: string }) => {
-  const res = await fetch(`${API_BASE_URL}/products/${id}`);
+  const res = await fetch(`${API_BASE_URL}/api/products/${id}`);
   const product = (await res.json()) as Product;
 
   return (

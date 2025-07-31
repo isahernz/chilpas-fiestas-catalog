@@ -1,23 +1,23 @@
 import { ProductCard } from "@/app/components/product/product-card";
 import { Product } from "@/app/types";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || process.env.VERCEL_URL;
 
 export async function ProductList({ query, celebration }: { query: string; celebration: string }) {
   let products: Product[] = [];
 
   if (!query && !celebration) {
-    const res = await fetch(`${API_BASE_URL}/products`);
+    const res = await fetch(`${API_BASE_URL}/api/products`);
     products = await res.json();
   }
 
   if (query && !celebration) {
-    const res = await fetch(`${API_BASE_URL}/products?query=${query}`);
+    const res = await fetch(`${API_BASE_URL}/api/products?query=${query}`);
     products = await res.json();
   }
 
   if (!query && celebration) {
-    const res = await fetch(`${API_BASE_URL}/products/by-celebration/${celebration}`);
+    const res = await fetch(`${API_BASE_URL}/api/products/by-celebration/${celebration}`);
     products = await res.json();
   }
 
