@@ -13,7 +13,7 @@ import { Celebration } from "@/app/types/celebration";
 import { useApi } from "@/app/hooks/useApi";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+const API_BASE_URL = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : process.env.API_BASE_URL;
 
 export function CelebrationFilter() {
   const { data: celebrations, isLoading, error } = useApi<Celebration[]>(`${API_BASE_URL}/api/celebrations`);
