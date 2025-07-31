@@ -17,22 +17,26 @@ export function CelebrationFilter({ celebrations }: { celebrations: Celebration[
   const pathname = usePathname();
   const { replace } = useRouter();
 
+  const currentCelebration = searchParams.get("celebration") || "*";
+
   const handleSelectChange = (value: string) => {
     const params = new URLSearchParams(searchParams);
 
-    if (value === "*") {
-      params.delete("celebration");
-    } else if (value) {
-      params.set("celebration", value);
-    } else {
-      params.delete("celebration");
-    }
+    if (value !== currentCelebration) {
+      params.delete("query");
 
-    replace(`${pathname}?${params.toString()}`);
+      if (value === "*") {
+        params.delete("celebration");
+      } else {
+        params.set("celebration", value);
+      }
+
+      replace(`${pathname}?${params.toString()}`);
+    }
   };
 
   return (
-    <Select onValueChange={handleSelectChange}>
+    <Select onValueChange={handleSelectChange} defaultValue={currentCelebration} value={currentCelebration}>
       <SelectTrigger className="w-full max-w-[200px]">
         <SelectValue placeholder="Selecciona una celebración" />
       </SelectTrigger>
@@ -40,7 +44,7 @@ export function CelebrationFilter({ celebrations }: { celebrations: Celebration[
         <SelectGroup>
           {celebrations?.length === 0 && <SelectLabel>No hay celebraciones disponibles</SelectLabel>}
 
-          <SelectItem value="*">Todos las celebraciones</SelectItem>
+          <SelectItem value="*">Todas las celebraciones</SelectItem>
           {celebrations?.map(celebration => (
             <SelectItem key={celebration.id} value={celebration.slug}>
               {celebration.name}
