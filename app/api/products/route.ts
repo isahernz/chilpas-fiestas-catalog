@@ -1,5 +1,5 @@
 import { getAllProducts, getProductsByCelebration, searchProducts } from "@/app/lib/db/products";
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -8,18 +8,29 @@ export async function GET(request: NextRequest) {
 
   if (!query && !celebration) {
     const products = await getAllProducts();
-    if (!products) return NextResponse.json({ error: "Error al obtener  productos" }, { status: 500 });
-    return NextResponse.json(products);
+
+    if (!products) return new Response("Error al obtener  productos", { status: 500 });
+
+    return new Response(JSON.stringify(products), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 
   if (celebration && !query) {
     const products = await getProductsByCelebration(celebration);
-    if (!products) return NextResponse.json({ error: "Error al buscar  productos" }, { status: 500 });
-    return NextResponse.json(products);
+    if (!products) return new Response("Error al buscar  productos", { status: 500 });
+    return new Response(JSON.stringify(products), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 
   const products = await searchProducts(query!);
 
-  if (!products) return NextResponse.json({ error: "Error al buscar  productos" }, { status: 500 });
-  return NextResponse.json(products);
+  if (!products) return new Response("Error al buscar  productos", { status: 500 });
+  return new Response(JSON.stringify(products), {
+    status: 200,
+    headers: { "Content-Type": "application/json" },
+  });
 }
