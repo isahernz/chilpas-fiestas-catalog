@@ -1,30 +1,24 @@
 import { useState, useEffect } from "react";
 
-export const useApi = <T>(url: string, options?: RequestInit) => {
+export const useApi = <T>(url: string) => {
   const [data, setData] = useState<T | null>(null);
+  const [error, setError] = useState<Error | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      setIsLoading(true);
-      setError(null);
-
       try {
-        const response = await fetch(url, options);
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-
-        const data = await response.json();
-        setData(data);
-      } catch (error) {
-        setError(error instanceof Error ? error.message : "Upps error desconocido");
+        const response = await fetch(url);
+        const result = await response.json();
+        setData(result);
+      } catch (err) {
+        setError(err instanceof Error ? err : new Error("Upps! Ocurred an error"));
       } finally {
         setIsLoading(false);
       }
     };
-
     fetchData();
-  }, [url, JSON.stringify(options)]);
+  }, [url]);
 
-  return { data, isLoading, error };
+  return { data, error, isLoading };
 };
