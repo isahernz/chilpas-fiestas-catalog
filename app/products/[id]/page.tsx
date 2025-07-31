@@ -2,7 +2,7 @@ import { ProductInfoDetails } from "@/app/components/product/product-info-detail
 import ProductDetailsSkeleton from "@/app/components/ui/skeletons/product-details-skeleton";
 import { Suspense } from "react";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || process.env.VERCEL_URL;
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || process.env.VERCEL_URL || process.env.VERCEL_BRANCH_URL;
 
 export const generateMetadata = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
