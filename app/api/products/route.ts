@@ -18,8 +18,11 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(products);
   }
 
-  const products = await searchProducts(query!);
+  if (query) {
+    const products = await searchProducts(query);
+    if (!products) return NextResponse.json({ error: "Error al buscar productos" }, { status: 500 });
+    return NextResponse.json(products);
+  }
 
-  if (!products) return NextResponse.json({ error: "Error al buscar  productos" }, { status: 500 });
-  return NextResponse.json(products);
+  return NextResponse.json([]);
 }
