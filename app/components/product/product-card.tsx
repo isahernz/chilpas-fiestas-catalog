@@ -17,7 +17,7 @@ export const ProductCard = ({ product }: { product: Product }) => {
 
       <CardHeader>
         <Badge variant="spotlight" className="text-xs capitalize">
-          {product.celebrations?.name}
+          {product.celebrations.name}
         </Badge>
         <h3 className="line-clamp-2 text-lg font-bold text-gray-900">{product.name}</h3>
         <p className="line-clamp-3 text-sm text-pretty text-gray-600">{product.description}</p>
