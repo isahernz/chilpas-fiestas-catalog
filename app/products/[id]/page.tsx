@@ -1,5 +1,6 @@
 import { ProductInfoDetails } from "@/app/components/product/product-info-details";
 import ProductDetailsSkeleton from "@/app/components/ui/skeletons/product-details-skeleton";
+import { Product } from "@/app/types";
 import { Suspense } from "react";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
@@ -7,7 +8,7 @@ const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 export const generateMetadata = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
   const res = await fetch(`${API_BASE_URL}/api/products/${id}`);
-  const { data: product } = await res.json();
+  const product: Product = await res.json();
 
   return {
     title: `Chilpas Fiestas | ${product?.name} 🥳`,
