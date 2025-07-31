@@ -34,7 +34,13 @@ export const searchProducts = async (query: string) => {
       throw new Error(`Error fetching products: ${error.message}`);
     }
 
-    return products ?? [];
+    return products.map(({ celebration_id, celebration_name, ...product }) => ({
+      ...product,
+      celebrations: {
+        id: celebration_id,
+        name: celebration_name,
+      },
+    }));
   } catch (error) {
     console.error("Error en searchProducts:", error);
     return [];
