@@ -2,11 +2,11 @@ import { ProductInfoDetails } from "@/app/components/product/product-info-detail
 import ProductDetailsSkeleton from "@/app/components/ui/skeletons/product-details-skeleton";
 import { Suspense } from "react";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || process.env.VERCEL_URL || process.env.VERCEL_BRANCH_URL;
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || `https://${process.env.VERCEL_URL}/`;
 
 export const generateMetadata = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
-  const res = await fetch(`${API_BASE_URL}/api/products/${id}`);
+  const res = await fetch(`${API_BASE_URL}api/products/${id}`);
   const { data: product } = await res.json();
 
   return {
