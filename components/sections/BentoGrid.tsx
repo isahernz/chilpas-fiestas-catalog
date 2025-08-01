@@ -18,7 +18,7 @@ export function BentoGrid({ celebrations }: { celebrations: Celebration[] }) {
           </div>
           <div className="aspect-video h-[250px] w-full overflow-hidden rounded-2xl">
             <img
-              src={celebrations[0].cover}
+              src={celebrations[0].cover || "/celebrations/celebracion-graduacion.png"}
               alt={celebrations[0].name}
               className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
@@ -38,7 +38,7 @@ export function BentoGrid({ celebrations }: { celebrations: Celebration[] }) {
           </div>
           <div className="aspect-square h-[257px] overflow-hidden rounded-xl">
             <img
-              src={celebrations[1].cover}
+              src={celebrations[1].cover || "/celebrations/celebracion-15.png"}
               alt={celebrations[1].name}
               className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
@@ -58,7 +58,7 @@ export function BentoGrid({ celebrations }: { celebrations: Celebration[] }) {
           </div>
           <div className="aspect-square overflow-hidden rounded-xl">
             <img
-              src={celebrations[2].cover}
+              src={celebrations[2].cover || "/celebrations/despedida-solter.jpg"}
               alt={celebrations[2].name}
               className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
@@ -78,7 +78,7 @@ export function BentoGrid({ celebrations }: { celebrations: Celebration[] }) {
           </div>
           <div className="aspect-square overflow-hidden rounded-xl">
             <img
-              src={celebrations[3].cover}
+              src={celebrations[3].cover || "/celebrations/bautizo.jpg"}
               alt={celebrations[3].name}
               className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
@@ -98,7 +98,7 @@ export function BentoGrid({ celebrations }: { celebrations: Celebration[] }) {
           </div>
           <div className="aspect-square overflow-hidden rounded-xl">
             <img
-              src={celebrations[4].cover}
+              src={celebrations[4].cover || "/celebrations/navidad.png"}
               alt={celebrations[4].name}
               className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
