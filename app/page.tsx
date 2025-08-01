@@ -1,29 +1,24 @@
-import { Header } from "@/app/components/common/header";
-import { ProductList } from "@/app/components/product/product-list";
-import { Suspense } from "react";
-import ProductListSkeleton from "@/app/components/ui/skeletons/product-list-skeleton";
+import { Footer } from "@/components/common/Footer";
+import { Header } from "@/components/common/Header";
+import { About } from "@/components/sections/About";
+import { Celebrations } from "@/components/sections/Celebrations";
+import { Hero } from "@/components/sections/Hero";
+import { Location } from "@/components/sections/Location";
+import { ProductsGrid } from "@/components/sections/ProductsGrid";
 
-type PageProps = {
-  searchParams?: Promise<{
-    query: string | undefined;
-    celebration: string | undefined;
-  }>;
-};
-
-export default async function Home({ searchParams }: PageProps) {
-  const params = await searchParams;
-  const { query, celebration } = params || {};
-
+export default function Home() {
   return (
     <>
       <Header />
-      <main className="mx-auto max-w-4xl p-4">
-        <Suspense fallback={<ProductListSkeleton />}>
-          <ProductList query={query || ""} celebration={celebration || ""} />
-        </Suspense>
+      <main className="mx-auto flex max-w-6xl flex-col items-center justify-center space-y-16 px-4 py-10">
+        <Hero />
+        <Celebrations />
+        <ProductsGrid />
+        <About />
+        <Location />
       </main>
+
+      <Footer />
     </>
   );
 }
-
-export const dynamic = "force-dynamic";
