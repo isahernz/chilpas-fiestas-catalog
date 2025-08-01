@@ -3,7 +3,9 @@ import { createClient } from "@/app/lib/supabase/server";
 export async function getAllCelebrations() {
   const supabase = await createClient();
 
-  const { data: celebrations, error } = await supabase.from("celebrations").select(`id, name, slug`);
+  const { data: celebrations, error } = await supabase
+    .from("celebrations")
+    .select(`id, name, slug, cover, description`);
 
   if (error) throw new Error(error.message);
 
