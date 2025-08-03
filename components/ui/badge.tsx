@@ -17,7 +17,7 @@ const badgeVariants = cva(
         spotlight:
           "animate-shine rounded-full border-pink-200 bg-[linear-gradient(110deg,#fbbf24,20%,#ec4899,40%,#8b5cf6,60%,#06b6d4,80%,#fbbf24)] bg-[length:200%_100%] text-[10px] text-nowrap text-white font-semibold shadow-lg transition-colors dark:border-pink-300 dark:bg-[linear-gradient(110deg,#f59e0b,20%,#db2777,40%,#7c3aed,60%,#0891b2,80%,#f59e0b)]",
         landing:
-          "text-center mx-auto rounded-full border border-purple-200 bg-gradient-to-r from-purple-100 to-pink-100 px-4 py-2 text-sm font-medium text-purple-700 ",
+          "text-center rounded-full border border-purple-200 bg-gradient-to-r from-purple-100 to-pink-100 px-4 py-2 text-sm text-purple-700 ",
       },
     },
     defaultVariants: {
