@@ -1,6 +1,7 @@
 import { NavbarCatalog } from "@/app/catalogo/components/NavbarCatalog";
 import { ProductList } from "@/app/catalogo/components/products";
 import { ProductListSkeleton } from "@/components/ui/skeletons/";
+import { Header } from "@/layouts/Header/Header";
 import { Suspense } from "react";
 
 type PageProps = {
@@ -16,6 +17,7 @@ export default async function Catalog({ searchParams }: PageProps) {
 
   return (
     <>
+      <Header />
       <main className="mx-auto w-[95%] max-w-6xl space-y-10 pt-30">
         <NavbarCatalog />
         <Suspense fallback={<ProductListSkeleton />}>
