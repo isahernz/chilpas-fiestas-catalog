@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "@/app/styles/globals.css";
+import { Header } from "@/layouts/Header/Header";
 
 const geist = Geist({
   variable: "--font-geist-sans",
@@ -44,7 +45,10 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="es" className={geist.className}>
-      <body className="min-h-screen bg-gradient-to-br from-pink-50 via-blue-50 to-yellow-50">{children}</body>
+      <body className="min-h-screen bg-gradient-to-br from-pink-50 via-blue-50 to-yellow-50">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
