@@ -1,4 +1,4 @@
-import { ChilpasLogo } from "@/components/common/ChilpasLogo";
+import { ChilpasLogo } from "@/components/shared/ChilpasLogo";
 import { Facebook } from "@/components/icons/Facebook";
 import { Instagram } from "@/components/icons/Instagram";
 import { TikTok } from "@/components/icons/TikTok";
