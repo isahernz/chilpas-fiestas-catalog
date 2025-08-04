@@ -1,4 +1,4 @@
-import { ChilpasLogo } from "@/components/common/ChilpasLogo";
+import { ChilpasLogo } from "@/components/shared/ChilpasLogo";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
