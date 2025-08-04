@@ -7,12 +7,12 @@ import Link from "next/link";
 import { useState } from "react";
 
 const links = [
+  { href: "#conocenos", label: "Conócenos" },
   { href: "#inicio", label: "Inicio" },
   { href: "#celebraciones", label: "Celebraciones" },
   { href: "#catalogo", label: "Cátalogo" },
   { href: "/catalogo", label: "Buscador de productos" },
-  { href: "#acerca-de", label: "Acerca de" },
-  { href: "#ubicacion", label: "Ubicación" },
+  { href: "#contacto", label: "Contáctanos" },
 ];
 
 export function Header() {
