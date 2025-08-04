@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="w-full space-y-10 text-center lg:flex lg:items-center lg:justify-between lg:space-y-0 lg:gap-x-5"
+      className="mt-30 w-full space-y-10 text-center lg:mt-40 lg:flex lg:items-center lg:justify-between lg:space-y-0 lg:gap-x-5"
     >
       <div className="flex flex-col items-center gap-y-5 md:mx-auto md:my-10 md:max-w-2xl lg:mx-0 lg:w-2/3 lg:max-w-full lg:items-start">
         <Badge variant="landing" className="animate-bounce">
