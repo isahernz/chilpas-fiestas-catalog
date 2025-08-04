@@ -32,10 +32,19 @@ export async function ProductList({ query, celebration }: { query: string; celeb
   }
 
   return (
-    <section className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-      {products?.map(product => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+    <section className="flex flex-col gap-y-6">
+      <div className="flex flex-col space-y-1">
+        <h1 className="bg-gradient-to-r from-pink-600 via-blue-600 to-yellow-600 bg-clip-text text-xl leading-none font-bold text-balance text-transparent sm:text-2xl">
+          Catálogo de Productos
+        </h1>
+        <span className="text-sm text-gray-500">Encuentra el producto perfecto para tu fiesta 🥳</span>
+      </div>
+
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+        {products?.map(product => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
     </section>
   );
 }
