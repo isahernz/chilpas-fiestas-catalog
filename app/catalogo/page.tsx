@@ -16,8 +16,8 @@ export default async function Catalog({ searchParams }: PageProps) {
 
   return (
     <>
-      <NavbarCatalog />
-      <main className="mx-auto max-w-4xl p-4">
+      <main className="mx-auto w-[95%] max-w-6xl space-y-10 pt-30">
+        <NavbarCatalog />
         <Suspense fallback={<ProductListSkeleton />}>
           <ProductList query={query || ""} celebration={celebration || ""} />
         </Suspense>
