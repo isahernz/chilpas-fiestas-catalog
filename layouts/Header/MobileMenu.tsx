@@ -13,6 +13,13 @@ export function MobileMenu({ isOpen }: { isOpen: boolean }) {
           </li>
         ))}
       </ul>
+
+      <Link
+        href="/catalogo"
+        className="group flex w-full shrink-0 justify-center gap-x-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 shadow-lg hover:from-purple-700 hover:to-pink-700"
+      >
+        <span className="text-xs font-medium text-white">Explora nuestro catálogo digital</span>
+      </Link>
     </nav>
   );
 }
