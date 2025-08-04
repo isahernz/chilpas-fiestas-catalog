@@ -37,7 +37,7 @@ export function CelebrationFilter({ celebrations }: { celebrations: Celebration[
 
   return (
     <Select onValueChange={handleSelectChange} defaultValue={currentCelebration} value={currentCelebration}>
-      <SelectTrigger className="w-full max-w-[200px]">
+      <SelectTrigger className="w-full md:max-w-[200px]">
         <SelectValue placeholder="Selecciona una celebración" />
       </SelectTrigger>
       <SelectContent>
