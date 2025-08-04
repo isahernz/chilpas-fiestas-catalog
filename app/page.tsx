@@ -1,10 +1,10 @@
-import { Footer } from "@/components/common/Footer";
-import { Header } from "@/components/common/Header";
 import { About } from "@/components/sections/About";
 import { Celebrations } from "@/components/sections/Celebrations";
 import { Hero } from "@/components/sections/Hero";
 import { Location } from "@/components/sections/Location";
 import { ProductsGrid } from "@/components/sections/ProductsGrid";
+import { Footer } from "@/components/shared/Footer";
+import { Header } from "@/layouts/Header/Header";
 
 export default function Home() {
   return (
