@@ -13,10 +13,10 @@ export function Hero() {
         <Badge variant="landing" className="animate-bounce">
           ¡Hacemos realidad tu fiesta ideal! 🥳
         </Badge>
-        <h1 className="text-4xl font-bold text-balance text-gray-900 md:text-[40px] lg:text-start xl:text-[54px]">
+        <h1 className="text-4xl font-bold text-balance text-gray-900 drop-shadow-lg md:text-[40px] lg:text-start xl:text-[54px]">
           Celebraciones que <HighlightedText>inspiran</HighlightedText> y <HighlightedText>emocionan</HighlightedText>
         </h1>
-        <p className="text-center text-sm leading-relaxed text-balance text-gray-600 md:text-base lg:text-start xl:text-lg">
+        <p className="text-center text-sm leading-relaxed text-balance text-gray-800 md:text-base lg:text-start xl:text-lg">
           En Chilpas Fiestas tenemos todo lo que necesitas para hacer de tu celebración un éxito. Desde decoraciones
           personalizadas hasta productos únicos. ¡Podemos ayudarte a encontrar lo que buscas!
         </p>
