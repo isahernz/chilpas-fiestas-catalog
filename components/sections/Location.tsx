@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export function Location() {
   return (
-    <section id="ubicacion" className="rounded-3xl bg-white px-4 py-10 lg:p-16">
+    <section id="contacto" className="rounded-3xl bg-white px-4 py-10 lg:p-16">
       <div className="container mx-auto px-4">
         <div className="mb-16 space-y-4 text-center">
           <Badge variant="landing">Encuéntranos 🧐</Badge>

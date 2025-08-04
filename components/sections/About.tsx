@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 
 export function About() {
   return (
-    <section id="acerca-de" className="rounded-3xl bg-white px-4 py-10 lg:p-16">
+    <section id="conocenos" className="rounded-3xl bg-white px-4 py-10 lg:p-16">
       <div className="container mx-auto px-4">
         <div className="mb-16 space-y-4 text-center">
           <Badge variant="landing">Nuestra historia ✍️</Badge>
