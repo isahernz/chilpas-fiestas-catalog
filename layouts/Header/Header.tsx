@@ -19,11 +19,12 @@ export function Header() {
       <div className="flex w-full items-center justify-between gap-x-4">
         <ChilpasLogo />
 
+        <Navigation className="hidden lg:block" />
+
         <Button variant="ghost" className="lg:hidden" onClick={toggleMenu}>
           {isOpen ? <X className="size-5" /> : <MenuIcon className="size-5" />}
         </Button>
       </div>
-      <Navigation className="hidden lg:block" />
       <MobileMenu isOpen={isOpen} />
     </header>
   );
