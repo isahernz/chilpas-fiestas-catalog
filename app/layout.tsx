@@ -44,7 +44,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="es" className={geist.className}>
-      <body className="min-h-screen bg-gradient-to-br from-yellow-300 via-pink-300 to-blue-300">{children}</body>
+      <body className="min-h-screen bg-gradient-to-br from-pink-50/80 via-cyan-50/60 to-yellow-50/80">{children}</body>
     </html>
   );
 }
