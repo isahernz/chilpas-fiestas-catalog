@@ -22,7 +22,7 @@ export function Hero() {
         </p>
         <Link
           href="/catalogo"
-          className="group flex max-w-max gap-x-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 shadow-lg hover:from-purple-700 hover:to-pink-700"
+          className="group flex max-w-max gap-x-2 rounded-full bg-gradient-to-r from-pink-500 via-orange-400 to-cyan-400 px-4 py-2 shadow-lg hover:from-pink-600 hover:via-orange-500 hover:to-cyan-500"
         >
           <span className="text-center text-sm font-medium text-white">Explora nuestro catálogo digital</span>
           <ArrowRight className="size-5 stroke-white transition-transform group-hover:translate-x-1" />
