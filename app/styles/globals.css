@@ -128,6 +128,36 @@
   .animate-shine {
     animation: shine 1s linear infinite;
   }
+
+  .bg-gradient-conic {
+    background:
+      radial-gradient(circle at 15% 85%, rgba(233, 30, 99, 0.6) 0%, transparent 60%),
+      radial-gradient(circle at 85% 15%, rgba(255, 152, 0, 0.6) 0%, transparent 60%),
+      radial-gradient(circle at 50% 20%, rgba(255, 235, 59, 0.5) 0%, transparent 50%),
+      radial-gradient(circle at 20% 50%, rgba(76, 175, 80, 0.6) 0%, transparent 60%),
+      radial-gradient(circle at 80% 70%, rgba(0, 188, 212, 0.6) 0%, transparent 60%),
+      radial-gradient(circle at 30% 30%, rgba(33, 150, 243, 0.5) 0%, transparent 50%),
+      radial-gradient(circle at 70% 50%, rgba(156, 39, 176, 0.5) 0%, transparent 50%),
+      radial-gradient(circle at 50% 80%, rgba(244, 67, 54, 0.4) 0%, transparent 45%),
+      linear-gradient(
+        135deg,
+        rgba(233, 30, 99, 0.2),
+        rgba(255, 152, 0, 0.2),
+        rgba(255, 235, 59, 0.2),
+        rgba(76, 175, 80, 0.2),
+        rgba(0, 188, 212, 0.2),
+        rgba(156, 39, 176, 0.2)
+      );
+  }
+
+  .bg-gradient-radial {
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+  }
 }
 
 @layer base {
