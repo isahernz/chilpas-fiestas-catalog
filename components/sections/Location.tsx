@@ -7,13 +7,16 @@ import Link from "next/link";
 
 export function Location() {
   return (
-    <section id="contacto" className="rounded-3xl bg-white px-4 py-10 lg:p-16">
+    <section
+      id="contacto"
+      className="rounded-3xl border border-white/20 bg-gradient-to-br from-green-100/70 via-cyan-50/50 to-blue-100/60 px-4 py-10 shadow-lg lg:p-16"
+    >
       <div className="container mx-auto px-4">
         <div className="mb-16 space-y-4 text-center">
           <Badge variant="landing">Encuéntranos 🧐</Badge>
           <h2 className="text-4xl font-bold text-gray-900 lg:text-5xl">
             Nuestra{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-pink-500 via-orange-400 to-cyan-400 bg-clip-text text-transparent">
               ubicación
             </span>
           </h2>
@@ -29,7 +32,7 @@ export function Location() {
               <h3 className="text-3xl font-bold text-gray-900">¡Te esperamos en nuestra tienda!</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-pink-600">
+                  <div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-cyan-400">
                     <MapPin className="h-4 w-4 text-white" />
                   </div>
                   <div>
@@ -41,7 +44,7 @@ export function Location() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-purple-600 to-pink-600">
+                  <div className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-cyan-400">
                     <Clock className="h-4 w-4 text-white" />
                   </div>
                   <div>
@@ -72,7 +75,7 @@ export function Location() {
 
           <div className="relative">
             <Card className="overflow-hidden border-0 shadow-2xl">
-              <div className="relative aspect-video bg-gradient-to-br from-purple-100 to-pink-100">
+              <div className="relative aspect-video bg-gradient-to-br from-pink-100 via-cyan-50 to-yellow-100">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d471.41317338527483!2d-98.1967435!3d19.0503061!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc1a1bda97c45%3A0xfc718be4c84e0b65!2sChilpas%20Fiestas!5e0!3m2!1ses-419!2smx!4v1754023169898!5m2!1ses-419!2smx"
