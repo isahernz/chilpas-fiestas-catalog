@@ -2,13 +2,16 @@ import { Badge } from "@/components/ui/badge";
 
 export function About() {
   return (
-    <section id="conocenos" className="rounded-3xl bg-white px-4 py-10 lg:p-16">
+    <section
+      id="conocenos"
+      className="rounded-3xl border border-white/20 bg-gradient-to-br from-yellow-100/70 via-orange-50/50 to-red-100/60 px-4 py-10 shadow-lg lg:p-16"
+    >
       <div className="container mx-auto px-4">
         <div className="mb-16 space-y-4 text-center">
           <Badge variant="landing">Nuestra historia ✍️</Badge>
           <h2 className="text-4xl font-bold text-gray-900 lg:text-5xl">
             Sobre
-            <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-pink-500 via-orange-400 to-cyan-400 bg-clip-text text-transparent">
               Chilpas Fiestas
             </span>
           </h2>
