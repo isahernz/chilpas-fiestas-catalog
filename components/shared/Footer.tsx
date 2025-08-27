@@ -11,13 +11,13 @@ export function Footer() {
       name: "Facebook",
       icon: Facebook,
       url: "https://www.facebook.com/share/1Fmu1UJ7YH/?mibextid=wwXIfr",
-      color: "hover:bg-blue-600",
+      color: "hover:bg-cyan-500",
     },
     {
       name: "Instagram",
       icon: Instagram,
       url: "https://www.instagram.com/chilpas.fiestas?igsh=cjEyNHIwcG9iNHM3",
-      color: "hover:bg-pink-600",
+      color: "hover:bg-pink-500",
     },
     {
       name: "TikTok",
@@ -67,7 +67,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h3 className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-xl font-bold text-transparent">
+            <h3 className="bg-gradient-to-r from-pink-400 via-orange-400 to-cyan-400 bg-clip-text text-xl font-bold text-transparent">
               Enlaces Rápidos
             </h3>
             <ul className="space-y-3">
@@ -75,9 +75,9 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="group flex items-center text-gray-300 transition-colors duration-300 hover:text-purple-400"
+                    className="group flex items-center text-gray-300 transition-colors duration-300 hover:text-pink-400"
                   >
-                    <span className="mr-3 h-2 w-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 transition-transform group-hover:scale-125" />
+                    <span className="mr-3 h-2 w-2 rounded-full bg-gradient-to-r from-pink-500 to-cyan-400 transition-transform group-hover:scale-125" />
                     {link.label}
                   </Link>
                 </li>
@@ -87,12 +87,12 @@ export function Footer() {
 
           {/* Contact Info */}
           <div className="space-y-6">
-            <h3 className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-xl font-bold text-transparent">
+            <h3 className="bg-gradient-to-r from-pink-400 via-orange-400 to-cyan-400 bg-clip-text text-xl font-bold text-transparent">
               Contacto
             </h3>
             <div className="space-y-4">
               <div className="group flex items-start space-x-3">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 transition-transform group-hover:scale-110">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-pink-500 to-cyan-400 transition-transform group-hover:scale-110">
                   <MapPin className="h-5 w-5 text-white" />
                 </div>
                 <div>
@@ -103,28 +103,28 @@ export function Footer() {
               </div>
 
               <div className="group flex items-center space-x-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 transition-transform group-hover:scale-110">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-r from-orange-400 to-yellow-400 transition-transform group-hover:scale-110">
                   <Phone className="h-5 w-5 text-white" />
                 </div>
-                <Link href="tel:+522222425496" className="text-gray-300 transition-colors hover:text-purple-400">
+                <Link href="tel:+522222425496" className="text-gray-300 transition-colors hover:text-orange-400">
                   +52 222 242 5496
                 </Link>
               </div>
 
               <div className="group flex items-center space-x-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 transition-transform group-hover:scale-110">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-r from-cyan-400 to-green-400 transition-transform group-hover:scale-110">
                   <Mail className="h-5 w-5 text-white" />
                 </div>
                 <Link
                   href="mailto:contacto@chilpasfiestas.com"
-                  className="text-gray-300 transition-colors hover:text-purple-400"
+                  className="text-gray-300 transition-colors hover:text-cyan-400"
                 >
                   contacto@chilpasfiestas.com
                 </Link>
               </div>
 
               <div className="group flex items-start space-x-3">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 transition-transform group-hover:scale-110">
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-r from-red-400 to-pink-500 transition-transform group-hover:scale-110">
                   <Clock className="h-5 w-5 text-white" />
                 </div>
                 <div className="text-gray-300">
