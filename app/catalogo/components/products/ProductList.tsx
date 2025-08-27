@@ -34,7 +34,7 @@ export async function ProductList({ query, celebration }: { query: string; celeb
   return (
     <section className="flex flex-col gap-y-6">
       <div className="flex flex-col space-y-1">
-        <h1 className="bg-gradient-to-r from-pink-600 via-blue-600 to-yellow-600 bg-clip-text text-xl leading-none font-bold text-balance text-transparent sm:text-2xl">
+        <h1 className="bg-gradient-to-r from-pink-500 via-cyan-400 to-yellow-400 bg-clip-text text-xl leading-none font-bold text-balance text-transparent sm:text-2xl">
           Catálogo de Productos
         </h1>
         <span className="text-sm text-gray-500">Encuentra el producto perfecto para tu fiesta 🥳</span>
