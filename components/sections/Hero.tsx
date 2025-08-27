@@ -38,7 +38,7 @@ export function Hero() {
           Tu navegador no soporta videos HTML5.
         </video>
 
-        <Badge variant="landing" className="absolute top-3 right-3 px-2 py-0.5 text-xs text-purple-700">
+        <Badge variant="landing" className="absolute top-3 right-3 px-2 py-0.5 text-xs">
           ¡Todo para tus fiestas! 🎉
         </Badge>
       </div>
