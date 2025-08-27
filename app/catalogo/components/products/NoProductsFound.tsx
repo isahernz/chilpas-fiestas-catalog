@@ -5,7 +5,7 @@ export function NoProductsFound() {
         <span role="img" aria-label="carita triste" className="mb-4 text-6xl">
           😔
         </span>
-        <h2 className="mb-2 bg-gradient-to-r from-pink-600 via-blue-600 to-yellow-600 bg-clip-text font-sans text-3xl font-extrabold text-balance text-transparent sm:text-4xl">
+        <h2 className="mb-2 bg-gradient-to-r from-pink-500 via-cyan-400 to-yellow-400 bg-clip-text font-sans text-3xl font-extrabold text-balance text-transparent sm:text-4xl">
           ¡Ups! No encontramos productos
         </h2>
         <p className="text-md mb-6 font-sans text-gray-600 sm:text-lg">
