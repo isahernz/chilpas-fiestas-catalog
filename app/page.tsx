@@ -1,5 +1,6 @@
 import { About } from "@/components/sections/About";
 import { Celebrations } from "@/components/sections/Celebrations";
+import { Contact } from "@/components/sections/Contact";
 import { Hero } from "@/components/sections/Hero";
 import { Location } from "@/components/sections/Location";
 import { ProductsGrid } from "@/components/sections/ProductsGrid";
@@ -16,8 +17,8 @@ export default function Home() {
         <ProductsGrid />
         <About />
         <Location />
+        <Contact />
       </main>
-
       <Footer />
     </>
   );
