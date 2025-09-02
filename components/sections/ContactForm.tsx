@@ -8,7 +8,7 @@ export function ContactForm() {
   return (
     <Card className="mx-auto max-w-2xl border-0 bg-white shadow-lg">
       <CardContent className="space-y-6 p-4">
-        <form className="space-y-6">
+        <form className="space-y-4">
           <div className="grid gap-4 md:grid-cols-2">
             <Input
               type="text"
@@ -18,14 +18,6 @@ export function ContactForm() {
             <Input
               placeholder="Correo electrónico"
               type="email"
-              className="h-12 rounded-xl border-gray-200 focus:border-purple-500 focus:ring-purple-500"
-            />
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            <Input
-              placeholder="Teléfono"
-              type="tel"
-              inputMode="tel"
               className="h-12 rounded-xl border-gray-200 focus:border-purple-500 focus:ring-purple-500"
             />
           </div>
