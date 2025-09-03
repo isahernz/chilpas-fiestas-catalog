@@ -1,6 +1,7 @@
 import "@/app/styles/globals.css";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import { Toaster } from "@pheralb/toast";
 
 const geist = Geist({
   variable: "--font-geist-sans",
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <div className="bg-gradient-conic fixed inset-0 z-0"></div>
         <div className="bg-gradient-radial fixed inset-0 z-0"></div>
         <div className="relative z-10">{children}</div>
+        <Toaster />
       </body>
     </html>
   );
