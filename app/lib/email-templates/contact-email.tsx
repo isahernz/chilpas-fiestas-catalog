@@ -75,7 +75,7 @@ export function ContactEmailTemplate({ name, email, message }: EmailTemplateProp
         {/* CTA Button */}
         <div style={{ textAlign: "center", marginTop: "30px" }}>
           <a
-            href={`mailto:${email}?subject=Re: Tu mensaje en Chilpas Fiestas`}
+            href={`mailto:${email}?subject=Re:%20Tu%20mensaje%20en%20Chilpas%20Fiestas`}
             style={{
               display: "inline-block",
               backgroundColor: "#f97316",
