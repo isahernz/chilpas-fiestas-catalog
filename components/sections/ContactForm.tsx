@@ -10,18 +10,48 @@ import { contactFormSchema, ContactFormSchema } from "@/app/schemas/contact-form
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { cn } from "@/app/utils/cn";
+import { toast } from "@pheralb/toast";
 
 export function ContactForm() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors, isSubmitting },
   } = useForm<ContactFormSchema>({
     resolver: zodResolver(contactFormSchema),
   });
 
-  const onSubmit = async ({ name, email, message }: ContactFormSchema) => {
-    console.log({ name, email, message });
+  const onSubmit = async (data: ContactFormSchema) => {
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Error al enviar el mensaje");
+      }
+
+      // Toast de éxito
+      toast.success({
+        text: "¡Mensaje enviado exitosamente! Te contactaremos pronto. 🥳",
+      });
+
+      reset(); // Limpiar el formulario
+    } catch (error) {
+      console.error("Error enviando mensaje:", error);
+
+      // Toast de error
+      toast.error({
+        text: error instanceof Error ? error.message : "Error al enviar el mensaje. Inténtalo de nuevo.",
+      });
+    }
   };
 
   return (
@@ -46,10 +76,11 @@ export function ContactForm() {
             </div>
 
             <div className="space-y-3">
-              <Label htmlFor="name" className="text-gray-700">
+              <Label htmlFor="email" className="text-gray-700">
                 Correo Electrónico
               </Label>
               <Input
+                id="email"
                 placeholder="tucorreo@email.com"
                 type="email"
                 className={cn({
