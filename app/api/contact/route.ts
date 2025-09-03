@@ -15,8 +15,8 @@ export async function POST(request: NextRequest) {
 
     // Enviar el correo
     const { data, error } = await resend.emails.send({
-      from: "Chilpas Fiestas <onboarding@resend.dev>", // Dominio por defecto de Resend (solo para desarrollo)
-      to: ["contacto@chilpasfiestas.com"], // Tu correo donde quieres recibir los mensajes
+      from: "Chilpas Fiestas <contacto@chilpasfiestas.com>", // Dominio por defecto de Resend (solo para desarrollo)
+      to: ["contacto@chilpasfiestas.com"], // Tu correo donde quieres recibir jes
       subject: `Nuevo mensaje de contacto de ${name}`,
       html: generateContactEmailHTML({ name, email, message }),
       // También enviamos una versión de texto plano
